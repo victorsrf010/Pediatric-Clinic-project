@@ -17,39 +17,10 @@ public class HelloController {
     @FXML
     private ListView<String> list;
 
-    /*public String getInfo() throws SQLException {
-
-        // Establish a connection to the database
-        Connection conn = DriverManager.getConnection("jdbc:jtds:sqlserver://LAPTOP-5K0DBPI8:1433/projetoei;instance=EI26272;user=sa;password=123456");
-
-        // Create a statement object
-        Statement statement = conn.createStatement();
-
-        // Execute a SQL query
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM CODPOSTAL");
-
-        // Process the result set
-        String cdPostal = null;
-        String name = null;
-        while (resultSet.next()) {
-            cdPostal = resultSet.getString("CODPOSTAL");
-            name = resultSet.getString("LOCALIDADE");
-            System.out.println("ID: " + cdPostal + ", Name: " + name);
-        }
-
-        // Close the resources
-        resultSet.close();
-        statement.close();
-        conn.close();
-
-        return ("ID: " + cdPostal + ", Name: " + name);
-
-    }*/
-
-
     public void initialize() throws SQLException {
+
         // Establish a connection to the database
-        Connection conn = DriverManager.getConnection("jdbc:jtds:sqlserver://LAPTOP-5K0DBPI8:1433/projetoei;instance=EI26272;user=sa;password=123456");
+        Connection conn = DriverManager.getConnection("jdbc:jtds:sqlserver://localhost:1433/projetoei;instance=DESKTOP-MUU271E;user=sa;password=123456");
 
         // Create a statement object
         Statement statement = conn.createStatement();
