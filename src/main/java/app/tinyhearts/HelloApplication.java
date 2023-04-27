@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  * desktop DB URL: jdbc:jtds:sqlserver://localhost:1433/projetoei;instance=DESKTOP-MUU271E;user=sa;password=123456
- * laptop DB URL:
+ * laptop  DB URL: jdbc:jtds:sqlserver://LAPTOP-5K0DBPI8:1433/projetoei;instance=EI26272;user=sa;password=123456
  * **/
 
 public class HelloApplication extends Application {
