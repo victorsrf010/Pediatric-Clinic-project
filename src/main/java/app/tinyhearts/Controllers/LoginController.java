@@ -1,20 +1,17 @@
 package app.tinyhearts.Controllers;
 
-import app.tinyhearts.DatabaseUtil;
-import app.tinyhearts.Identities.Utente;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
+import app.tinyhearts.Model;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-import java.sql.*;
-import java.util.Objects;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     public TextField numFuncionario;
     public ImageView logo;
@@ -24,5 +21,10 @@ public class LoginController {
 
     public void initialize() {
         errorText.setText("");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        entrarButton.setOnAction(actionEvent -> Model.getInstance().getViewFactory().showFuncionarioWindow());
     }
 }
