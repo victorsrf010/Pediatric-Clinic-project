@@ -7,6 +7,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.stage.Stage;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,12 +26,15 @@ public class LoginController implements Initializable {
     public PasswordField password;
     public Text errorText;
 
-    public void initialize() {
-        errorText.setText("");
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        entrarButton.setOnAction(actionEvent -> Model.getInstance().getViewFactory().showFuncionarioWindow());
+        entrarButton.setOnAction(actionEvent -> onLogin());
     }
+
+    private void onLogin() {
+        Stage stage = (Stage) errorText.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showFuncionarioWindow();
+    }
+
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.tinyhearts.Controllers.QuitConfirmationController">
+    <Button fx:id="yesButton" layoutX="136.0" layoutY="188.0" mnemonicParsing="false" text="Yes"/>
+    <Button fx:id="returnButton" layoutX="404.0" layoutY="188.0" mnemonicParsing="false" text="No"/>
+</AnchorPane>

@@ -29,7 +29,16 @@ public class ViewFactory {
 
     public void showLoginWindow() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/login.fxml"));
-        createStage(loader);
+        Scene scene = null;
+        try {
+            scene = new Scene(loader.load());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("TinyHearts");
+        stage.show();
     }
 
     public void showFuncionarioWindow() {
@@ -37,6 +46,20 @@ public class ViewFactory {
         FuncionarioController funcionarioController = new FuncionarioController();
         loader.setController(funcionarioController);
         createStage(loader);
+    }
+
+    public void showQuitConfirmation() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/quitConfirmation.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(loader.load());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("TinyHearts");
+        stage.show();
     }
 
     private void createStage(FXMLLoader loader) {
@@ -49,7 +72,12 @@ public class ViewFactory {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("TinyHearts");
+        stage.setMaximized(true);
         stage.show();
+    }
+
+    public void closeStage(Stage stage) {
+        stage.close();
     }
 
 }

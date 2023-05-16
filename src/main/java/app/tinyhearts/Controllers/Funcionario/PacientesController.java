@@ -18,7 +18,7 @@ public class PacientesController {
     public TableColumn<Utente, String> NIF;
 
     public void initialize() throws SQLException {
-        String query = "SELECT NOME, NIF FROM Utente order by NOME";
+        String query = "SELECT NOME, NIF FROM UTENTE order by NOME";
 
         ResultSet rs = DatabaseUtil.executeQuery(query);
         while (rs.next()) {

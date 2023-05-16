@@ -7,6 +7,7 @@ module app.tinyhearts {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires java.sql;
+    requires jakarta.persistence;
 
     opens app.tinyhearts to javafx.fxml;
     opens app.tinyhearts.Controllers to javafx.fxml;

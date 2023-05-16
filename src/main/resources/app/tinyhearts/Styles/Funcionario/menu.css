@@ -3,6 +3,7 @@
     -fx-font-size: 20;
     -fx-font-family: "Roboto Light";
     -fx-text-fill: #444444;
+    -fx-background-radius: 0;
 }
 
 .button:focused {

@@ -14,7 +14,7 @@ public class DatabaseUtil {
 
     // Establish a connection to the database
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:jtds:sqlserver://localhost:1433/projetoei;instance=DESKTOP-MUU271E;user=sa;password=123456");
+        return DriverManager.getConnection("jdbc:jtds:sqlserver://LAPTOP-5K0DBPI8:1433/projetoei;instance=EI26272;user=sa;password=123456");
     }
 
     // Retrieve data from the database

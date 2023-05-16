@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="projetoei@localhost" uuid="3039a6f4-0084-4af5-8722-61bcfc3258c2">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="projetoei" uuid="e85e1d26-0f4d-4ca2-9b67-14c261d68e04">
+      <driver-ref>sqlserver.jtds</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost\DESKTOP-VDIJP2R:1433;database=projetoei</jdbc-url>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://localhost:1433/projetoei;instance=DESKTOP-MUU271E</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
